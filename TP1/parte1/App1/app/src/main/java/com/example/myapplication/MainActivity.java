@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
                 int int_result = Integer.parseInt(str_num1) + Integer.parseInt(str_num2);
 
-                result.setText("Answer = " + int_result);
+                result.setText("Result = " + int_result);
             }
         });
     }
