@@ -3,29 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:fitsSystemWindows="true">
 
     <EditText
         android:id="@+id/num1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enter_number_hint"
         android:importantForAutofill="no"
-        android:inputType="number"/>
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/num2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enter_number_hint"
         android:importantForAutofill="no"
         android:inputType="number" />
 
     <Button
-        android:id="@+id/add_button"
-        android:layout_width="wrap_content"
+        android:id="@+id/sum_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add" />
+        android:text="@string/sum" />
 
     <TextView
         android:id="@+id/result"

@@ -2,5 +2,5 @@
     <string name="app_name" tools:ignore="Typos">TP1 - Parte 1 - Atividade 1</string>
     <string name="enter_number_hint">Enter a number</string>
     <string name="result">Result</string>
-    <string name="add">Add</string>
+    <string name="sum">SUM</string>
 </resources>
