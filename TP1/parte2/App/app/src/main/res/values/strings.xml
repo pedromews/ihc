@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="Typos">TP1 - Parte 2</string>
+    <string name="x_hint">X</string>
+    <string name="y_hint">Y</string>
+    <string name="z_hint">Z</string>
+    <string name="send">SEND</string>
+    <string name="message">There was a significant acceleration</string>
+    <string name="accelerometer_text">Accelerometer</string>
+    <string name="light_text">Light</string>
+    <string name="light_hint">Luminosity</string>
+    <string name="gps_text">GPS</string>
+    <string name="latitude_hint">Latitude</string>
+    <string name="longitude_hint">Longitude</string>
+    <string name="temperature_text">Temperature</string>
+    <string name="temperature_hint">Temperature in Celsius</string>
+</resources>
