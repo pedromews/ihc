@@ -27,9 +27,6 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Bundle bundle = this.getArguments();
-        assert bundle != null;
-        binding.message.setText(bundle.getString("data"));
     }
 
     @Override
