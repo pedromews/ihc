@@ -13,4 +13,5 @@
     <string name="longitude_hint">Longitude</string>
     <string name="temperature_text">Temperature</string>
     <string name="temperature_hint">Temperature in Celsius</string>
+    <string name="gps_button">Get coordinates</string>
 </resources>

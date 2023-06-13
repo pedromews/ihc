@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.hardware.Sensor;
@@ -11,11 +12,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.myapplication.databinding.FragmentFirstBinding;
 
@@ -37,18 +37,36 @@ public class FirstFragment extends Fragment  implements SensorEventListener {
         super.onViewCreated(view, savedInstanceState);
 
         SensorManager sensorManager = (SensorManager) requireActivity().getSystemService(Context.SENSOR_SERVICE);
-        Sensor sensorListener = sensorManager.getDefaultSensor(Sensor.TYPE_ALL);
+        Sensor lightSensorListener = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        Sensor temperatureSensorListener = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
+        Sensor acceleratorSensorListener = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-        if (sensorListener != null) {
-            sensorManager.registerListener(FirstFragment.this, sensorListener, SensorManager.SENSOR_DELAY_NORMAL);
+        if (lightSensorListener != null) {
+            sensorManager.registerListener(FirstFragment.this, lightSensorListener, SensorManager.SENSOR_DELAY_NORMAL);
+        }
+        if (temperatureSensorListener != null) {
+            sensorManager.registerListener(FirstFragment.this, temperatureSensorListener, SensorManager.SENSOR_DELAY_NORMAL);
+        }
+        if (acceleratorSensorListener != null) {
+            sensorManager.registerListener(FirstFragment.this, acceleratorSensorListener, SensorManager.SENSOR_DELAY_NORMAL);
         }
 
-        GpsTracker gpsTracker = new GpsTracker(getContext());
-        Location location = gpsTracker.getLocation();
-        if (location != null) {
-            binding.latitude.setText(String.format(Double.toString(location.getLatitude())));
-            binding.longitude.setText(String.format(Double.toString(location.getLongitude())));
-        }
+        ActivityCompat.requestPermissions(requireActivity(),
+                new String[]{
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_COARSE_LOCATION},
+                123);
+        binding.gpsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GpsTracker gpsTracker = new GpsTracker(getContext());
+                Location location = gpsTracker.getLocation();
+                if (location != null) {
+                    binding.latitude.setText(String.format(Double.toString(location.getLatitude())));
+                    binding.longitude.setText(String.format(Double.toString(location.getLongitude())));
+                }
+            }
+        });
     }
 
     @Override

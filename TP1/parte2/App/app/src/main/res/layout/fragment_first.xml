@@ -56,6 +56,11 @@
             android:hint="@string/longitude_hint"
             android:importantForAutofill="no"
             android:inputType="number"/>
+        <Button
+            android:id="@+id/gps_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gps_button"/>
     </LinearLayout>
 
     <TextView
