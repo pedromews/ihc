@@ -23,9 +23,9 @@ If you are delivering or updating an **entity**, make sure the following checks 
 
 :warning: If you are making a database change, make sure the following checks have been performed: :warning:
 
-- [ ] Database files updated according to changes, remember to follow the [guide](https://github.com/pedromews/ihc) for adding new columns. :page_facing_up:
-- [ ] Merge the PR only after 14:00 BRT and if there is a succesfully built vector! :no_entry_sign:
-- [ ] After the PR is released, execute our E2E tests (ALL_CAN) in Dev/XAllFeaturesEU10004 and monitor the DwC deployment, migration, and activation of the new vector. :white_check_mark:
+- [ ] :page_facing_up: Database files updated according to changes, remember to follow the [guide](https://github.com/pedromews/ihc) for adding new columns.
+- [ ] :no_entry_sign: Merge the PR only after 14:00 BRT and if there is a succesfully built vector!
+- [ ] :white_check_mark: After the PR is released, execute our E2E tests (ALL_CAN) in Dev/XAllFeaturesEU10004 and monitor the DwC deployment, migration, and activation of the new vector.
 
 If you are delivering a new use of **another service's API**, make sure the following checks have been performed:
 
