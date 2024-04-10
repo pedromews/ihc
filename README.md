@@ -8,7 +8,11 @@
 
 Before, setting the PR to **Ready to review**, make sure to meet the Definition of Done criteria bellow:
 
-The proper **tracking** of the change is done :
+Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+
+The proper **tracking** of the change is done:
 - [ ] Naming the PR's title with Jira item's suffix (e.g. _NGP-1234/Title_).
 - [ ] If applicable, setting the POM version and updating [changelog](/README.md).  
   Use `mvn versions:set -DnewVersion:x.x.x` and `mvn versions:commit`, or run the [Version Updater](https://github.com/pedromews/ihc).
