@@ -21,7 +21,7 @@ If you are delivering or updating an **entity**, make sure the following checks 
 - [ ] Java docs added to outbound events and entities.
 - [ ] Input Validation annotations have been added to API fields ([more information](https://github.com/pedromews/ihc)).
 
-🚨: If you are making a database change, make sure the following checks have been performed: 🚨:
+🚨 If you are making a database change, make sure the following checks have been performed: 🚨
 
 - [ ] :page_facing_up: Database files updated according to changes, remember to follow the [guide](https://github.com/pedromews/ihc) for adding new columns.
 - [ ] :no_entry_sign: Merge the PR only after 14:00 BRT and if there is a succesfully built vector!
